@@ -1,4 +1,19 @@
 from django.shortcuts import render
+from .models import *
 # Create your views here.
-def myapp(request):
-    return render(request, 'index.html'),
+
+
+def store(request):
+    context = {}
+    return render(request, 'app/store.html', context)
+
+
+def cart(request):
+    context = {}
+    return render(request, 'app/cart.html', context)
+
+
+def checkout(request):
+    context = {}
+    return render(request, 'app/checkout.html', context)
+
