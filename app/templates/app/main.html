@@ -4,20 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <title>electronic</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/index.css'%}">
+    <!--<link rel="stylesheet" type="text/css" href="{%static 'bootstrap.min.css'%}">-->
     <meta name="viewport" content="width=device-width, initial-scale=1,
     maximum-scale=1, minimum-scale=1" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-          crossorigin="anonymous">
 </head>
 <body>
-<h1>navbar placeholder</h1>
-<hr>
-<div class="container">
-{%block content%}
+<!--------------------------------------navigation------------------------>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{%url 'store'%}">E-commerce</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'store'%}">Store</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+    <div class="form-inline my-2 my-lg-0">
+      <a href="#" class="btn btn-warning">Login</a>
+      <a href="{%url 'cart'%}">
+        <img id="cart-icon" src="{%static 'images/cart.png'%}">
+      </a>
+    </div>
 
+</nav>
+<!-----------------------x---------------navigation----------x-------------->
+{%block content%}
 {%endblock content%}
-</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+<!------------------------------------script styles---------------
+<script type="text/javascript" src="{%static 'jquery-3.2.1.slim.min.js'%}"></script>
+<script type="text/javascript" src="{%static 'popper.min.js'%}"></script>
+<script type="text/javascript" src="{%static 'bootstrap.min.js'%}"></script>
+-----------------------x-------------script styles-------x-------->
 </body>
 </html>
