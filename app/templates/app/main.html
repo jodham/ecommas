@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,
     maximum-scale=1, minimum-scale=1" />
 </head>
-<body>
+<body style="padding: 0;">
 <!--------------------------------------navigation------------------------>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
@@ -43,13 +43,14 @@
 <!-----------------------x---------------navigation----------x-------------->
 {%block content%}
 {%endblock content%}
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"></script>
-<!------------------------------------script styles---------------
-<script type="text/javascript" src="{%static 'jquery-3.2.1.slim.min.js'%}"></script>
-<script type="text/javascript" src="{%static 'popper.min.js'%}"></script>
-<script type="text/javascript" src="{%static 'bootstrap.min.js'%}"></script>
------------------------x-------------script styles-------x-------->
+        crossorigin="anonymous"></script>-->
+<!------------------------------------script styles--------------->
+<script type="text/javascript" src="{%static 'css/jquery-3.2.1.slim.min.js'%}"></script>
+<script type="text/javascript" src="{%static 'css/popper.min.js'%}"></script>
+<script type="text/javascript" src="{%static 'css/bootstrap.min.js'%}"></script>
+<script type="text/javascript" src="{%static 'js/cart.js'%}"></script>
+<!-----------------------x-------------script styles-------x-------->
 </body>
 </html>

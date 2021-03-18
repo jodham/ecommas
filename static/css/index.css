@@ -1,5 +1,6 @@
 body{
 	background-color: hsl(0, 0%, 98%);
+	padding: 10px;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -11,6 +12,8 @@ h1,h2,h3,h4,h5,h6{
 	background-color: #fff;
 	border-radius: 1px;
 	padding: 5px;
+	margin-left: 50%;
+	margin-right: 50%;
 }
 
 .thumbnail{
@@ -33,7 +36,6 @@ h1,h2,h3,h4,h5,h6{
 	width:25px;
 	display: inline-block;
 	margin-left: 15px;
-	height: 25px;
 }
 
 #cart-total{
