@@ -46,8 +46,19 @@
   	</div>
   	<div class="col-lg-6">
   		<div class="box-element">
-  			
-  		</div>
-  	</div>
+  			<a class="btn btn-outline-dark" href="{%url 'cart'%}">&#x2190; Back to cart</a>
+  			<hr>
+  			<h3>Order Summary</h3>
+  			<hr>
+
+			<div class="cart-row">
+				<div style="flex: 2"><img class="row-image" src="{%static 'images/holder.png'%}"></div>
+				<div style="flex: 2"><p>product 1</p></div>
+				<div style="flex: 1"><p>$40</p></div>
+				<div style="flex: 1"><p>x2</p></div>
+  	       </div>
+  	       <h5>Items: 2</h5>
+  	       <h5>Total: 2</h5>
+
   </div>
 {%endblock content%}

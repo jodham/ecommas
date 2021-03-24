@@ -13,9 +13,10 @@ class Product(models.Model):
 	name = models.CharField(max_length=200, null=True)
 	price = models.FloatField()
 	digital = models.BooleanField(default=False, null=True, blank=False)
-	#image
+	image= models.ImageField(null=True, blank=True)
+	
 	def __str__(self):
-		pass
+		return self.name
 		
 
 class Order(models.Model):
@@ -42,3 +43,6 @@ class ShippingAddres(models.Model):
 	state = models.CharField(max_length=200, null=True)
 	zipcode = models.CharField(max_length=200, null=True)
 	date_added = models.DateTimeField(auto_now_add=True)
+
+	def __str__(self):
+	    return self.address
