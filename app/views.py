@@ -13,8 +13,14 @@ def store(request):
 
 
 def cart(request):
-    context = {}
-    return render(request, 'app/cart.html',	context)
+	if request.user.is_authenticated:
+		customer = request.user.customer
+		order, created = Order.objects.get_or_create(customer=customer, complete=False)
+		items = order.orderitem_set.all()
+	else:
+		items = []
+	context= {'items':items}
+	return render(request, 'app/cart.html', context)
 
 
 def checkout(request):
